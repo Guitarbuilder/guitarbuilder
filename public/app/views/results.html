@@ -1,0 +1,29 @@
+    <div class="container">
+        <div class="row row-content">
+            <h1>Results {{category}}</h1>    
+
+      <div class="row row-content" ng-repeat="obj in results">
+        <div class="media" >
+          <div class="media-left media-middle" >
+            <a href="#ObjectDetails?id={{obj._id}}">
+              <img class="media-object" data-ng-src="data:image/png;base64,{{obj.picFile}}" alt="Alternative text" height="150">
+            </a>
+          </div>
+          <div class="media-body">
+
+            
+              <h2 class="media-heading">{{obj.title}} </h2>  <!--<span class="badge">{{obj.vt}}</span>-->
+              
+              <medium>{{obj.category}}</medium>
+			 <p> {{obj.description | cut:true:4}}</p>
+          <!--    <p>{{obj.description}}</p>
+              <p>{{obj.location.zip}} {{obj.location.city}}</p>
+            
+                <div class="btn-group" role="group" aria-label="true">
+                  <button type="button" class="btn-primary  btn-lg" ng-show="{{isLoggedin}}" ng-click="getObject(obj._id)">Gett it!</button>
+                </div>-->
+
+          </div>
+        </div> 
+        </div>
+   </div>
